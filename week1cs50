@@ -1,0 +1,46 @@
+#include <cs50.h>
+#include <stdio.h>
+
+
+//prototyping for spaces and hases functions
+void spaces(int space);
+void hashes(int i);
+
+int main(void)
+{
+    int n;
+    do {
+        n = get_int("how tall?");
+    }
+    while(n<=0);
+
+    for (int i = 0; i < n; i++)
+    {
+        int space = n - i - 1;
+        spaces(space);
+        hashes(i);
+        printf("\n");
+    }
+}
+
+
+
+
+
+
+
+
+
+
+void spaces(int space){
+    for (int j = 0; j < space; j++)
+    {
+        printf(" ");
+    }
+}
+
+void hashes(int i){
+    for(int k = 0; k<=i; k++){
+        printf("#");
+    }
+}
